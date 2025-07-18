@@ -9,8 +9,8 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -21,21 +21,10 @@ body {
 
 @media (max-width: 767px) {
     .container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
         width: 350px;
         height: 750px;
-    }
-}
-
-.product {
-    width: 300px;
-    height: 456px;
-}
-
-@media (max-width: 767px) {
-    .product {
-        width: 350px;
-        height: 342px;
     }
 }
 
@@ -120,6 +109,7 @@ p {
     font-weight: 700;
     font-size: 32px;
     line-height: 1;
+    letter-spacing: 0.019px;
 }
 
 .old-price {
@@ -128,46 +118,43 @@ p {
     font-weight: 500;
     font-size: 13px;
     line-height: 1.231;
+    letter-spacing: 0.05px;
     text-decoration: line-through;
 }
 
-.button {
+button {
     background-color: #3D8168;
     width: 236px;
-    height: 50px;
+    padding: 16px 0;
     gap: 8px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 @media (max-width: 767px) {
-    .button {
+    button {
         width: 286px;
-        height: 50px;
-        gap: 8px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
-.button:hover {
+button:hover {
     background-color: #1A4032;
     cursor: pointer;
 }
 
-.button img {
+button img {
     width: 18px;
     height: 18px;
 }
 
-.button span {
+button span {
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.072;
+    letter-spacing: 0.087px;
 }
